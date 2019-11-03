@@ -11,7 +11,7 @@ const getLugarLatLng = async(dir) => {
     const resp = await instance.get();
 
     if (resp.data.Results.length === 0) {
-        throw new Error(`No hay resultados para la dirección: ${direcion}`)
+        throw new Error(`No se pudo determinar el clima para la dirección: ${dir}`)
     }
 
     const data = resp.data.Results[0];
